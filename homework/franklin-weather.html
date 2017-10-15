@@ -3,28 +3,16 @@
     <head>
     <meta charset="utf-8">
     <title>Franklin Weather</title>
-    <link rel="stylesheet" type="text/css" href="wilfredorchard.github.io/homework/franklin.css" />
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Sansita');
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: 'Sansita', sans-serif;
-        }
+    <link rel="stylesheet" type="text/css" href="franklin.css" />
 
-        body {
-            font-family: 'helvetiva', sans-serif;
-        }
-    </style>
 </head>
 
 <body>
 
-    <header><img src="plan-images/logo.jpeg" alt="logo">
-        <h1>Weather Site</h1>
+    <header id="header">
+        <img src="plan-images/logo.jpeg" alt="logo" />
+
+        <span class="name">Weather Site</span>
     </header>
     <nav>
         <ul>
@@ -42,7 +30,7 @@
             <p> 90 F / 66 F </p>
         </section>
 
-        <section class="cur_conditions">
+        <section class="conditions">
             <h3>Current Conditions</h3>
             <ul>
                 <li>
@@ -54,7 +42,7 @@
             </ul>
         </section>
 
-        <section class="hourly">
+        <section class="hours">
             <h2>Hourly Forecast</h2>
             <ul>
                 <li>7am ..F</li>
