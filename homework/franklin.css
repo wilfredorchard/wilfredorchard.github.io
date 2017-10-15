@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+* {
+    box-sizing: border-box;
+    /* changes width property
+    to total width instead of content width */
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main,
+figcaption,
+figure {
+    display: block;
+    /* just in case we have
+    any older browsers that don't recognize
+    the HTML5 semantic elements */
+}
+
+#page-header {
+    display: flex;
+    align-items: center;
+    background-color: #0E89D5;
+}
+
+/*img {
+width: 100px
+}
+*/
+#logo {
+    font-size:4em;
+    margin:0;
+}
+.site-name {
+    font-size: 2em;
+    font-weight: 600;
+    font-family: Sansita, "gadget", generic-family;
+    font-style: italic;
+}
+
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #0E89D5;
+    line-height: 3px;
+    padding: 4px;
+}
+
+nav a:link {
+    text-decoration: none;
+    /*unvisited link*/
+    color: #FFF;
+}
+
+nav a:visited {
+    /*visited link*/
+    color: #d8f;
+}
+
+nav a:hover,
+a:focus {
+    /*Link: hover, Link:Focus:*/
+    color: #6C4DDD;
+}
+
+nav a:active {
+
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-flow: row;
+    align-items: center;
+    padding-left: 0;
+    /*  margin: 10px*/
+}
+
+nav ul li {
+    padding-right: 1em;
+    font-size: 4vw;
+}
+
+Body {
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    /* remove any margin from body */
+    padding: 0;
+    /* ditto for padding */
+    font-size: 20px;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-image: url("/weather_data/images/plan-images/sunny-winter.jpg");
+    background-size: cover;
+    background-color: #FFF
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Sansita, 'Geneva', generic-family;
+    color: #0e89d5;
+}
+
+.overview {
+    padding: 1em;
+    border: 1px black solid;
+    border-radius: 5px;
+    margin-bottom: 2em;
+    background-color: rgba(200, 200, 200, .6);
+}
+
+.overview h2 {
+    color: black;
+    font-size: 40px;
+    text-align: center;
+}
+
+.overview p:before {
+    content: " \2600";
+}
+
+.cur_conditions {
+    background-image: url("/weather_data/images/plan-images/raindrops.jpg");
+    background-color: rgba(200, 200, 200, .6);
+    margin: 2em auto;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.cur_conditions ul {
+    list-style: none;
+}
+
+.cur_conditions h3 {
+    text-align: center;
+    color: black;
+}
+.hourly{
+    display: none;
+}
+footer {
+    line-height: 70px;
+    margin-bottom: 3em;
+    background-color: #0E89D5;
+}

@@ -3,6 +3,7 @@
     <head>
     <meta charset="utf-8">
     <title>Franklin Weather</title>
+    <link rel="stylesheet" type="text/css" href="wilfredorchard.github.io/homework/franklin.css" />
     <style>
         @import url('https://fonts.googleapis.com/css?family=Sansita');
         h1,
@@ -26,18 +27,42 @@
         <h1>Weather Site</h1>
     </header>
     <nav>
-         <a href="https://wilfredorchard.github.io/">Home </a> <a href="franklin-weather.html">Franklin </a>Greenville Springfeild Search
+        <ul>
+            <li><a title="Go to home page" href="../index.html">Home</a> </li>
+            <li><a title="Franklin Weather" href="">Franklin</a> </li>
+            <li><a title="Greenville Weather" href="">Greenville</a> </li>
+            <li><a title="Springfield Weather" href="">Springfield</a> </li>
+            <li><a title="Search" href="">Search</a></li>
+        </ul>
     </nav>
-    <h1>Location</h1>
-    <b>City</b>: "Franklin"<br>
-    <b>State</b>: "ID"<br>
-    <h1>current conditions</h1>
-    <b>High</b>: 90<br>
-    <b>Low</b>: 66<br>
-    <b>Precipitation</b>: 0<br>
-    <b>Wind</b>: "1 - 5"<br>
-    <b>Direction</b>: "Southwest"<br>
-    <b>Summary</b>: "Sunny"
+    <main>
+        <h1>Franklin, ID</h1>
+        <section class="overview">
+            <h2>70 F</h2>
+            <p> 90 F / 66 F </p>
+        </section>
+
+        <section class="cur_conditions">
+            <h3>Current Conditions</h3>
+            <ul>
+                <li>
+                    <b>Wind:</b> Southwest @ 1 - 5 MPH
+                </li>
+                <li>
+                    <b>Precip:</b> 0%
+                </li>
+            </ul>
+        </section>
+
+        <section class="hourly">
+            <h2>Hourly Forecast</h2>
+            <ul>
+                <li>7am ..F</li>
+                <li>8am ..F</li>
+                <li>9am ..F</li>
+            </ul>
+        </section>
+    </main>
 <footer>
     &copy; 2017, William Orchard
 </footer>
