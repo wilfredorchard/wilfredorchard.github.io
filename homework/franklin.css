@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Sansita');
-* {
-    box-sizing: border-box;
-    /* changes width property
-    to total width instead of content width */
-}
+
 
 *:before,
 *:after {
@@ -20,9 +16,7 @@ main,
 figcaption,
 figure {
     display: block;
-    /* just in case we have
-    any older browsers that don't recognize
-    the HTML5 semantic elements */
+
 }
 
 #header {
@@ -44,8 +38,8 @@ figure {
 }
 
 nav {
-    position: fixed;
-    bottom: 0;
+    position:fixed;
+    bottom:0;
     left: 0;
     right: 0;
     background-color: #0E89D5;
@@ -103,12 +97,17 @@ h6 {
     border-radius: 5px;
     margin-bottom: 2em;
     background-color: rgba(200, 200, 200, .6);
+
+
 }
 
-.overview h2 {
+.overview h2{
     color: black;
     font-size: 40px;
     text-align: center;
+}
+.overview h3{
+    color: black;
 }
 
 .overview p:before {
@@ -131,12 +130,61 @@ h6 {
     text-align: center;
     color: black;
 }
+.hours h3{
+    text-align: center;
+    color: black;
+
+}
 .hours{
     display: none;
+    background-image: url("/weather_data/images/plan-images/raindrops.jpg");
+    background-color: rgba(200, 200, 200, .6);
+    margin: 2em auto;
+    border: 1px solid;
+    border-radius: 5px;
+
+
+}
+.hours ul{
+    list-style-type: none;
 }
 footer {
     text-align: center;
     line-height: 70px;
     margin-bottom: 3em;
     background-color: #0E89D5;
+}
+
+@media screen and (min-width: 480px) {
+    nav{
+        position:static;
+
+    }
+    .hours{
+        display: flex;
+        margin: 1em;
+        padding: 2em;
+    }
+    .conditions{
+        order: -1;
+        margin:1em;
+        padding: 2em;
+    }
+   #content{
+       display: flex;
+        text-align: center;
+        justify-content:space-around;
+        align-items:center;
+
+    }
+    .overview{
+        padding: 2em;
+    }
+    .franklin{
+        align-self: flex-start;
+    }
+
+
+    }
+}
 }
