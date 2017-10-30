@@ -174,12 +174,12 @@ footer {
 
 
     }
-   #content{
-       display: flex;
+    #content{
+        display: flex;
         text-align: center;
         justify-content:space-around;
         align-items:center;
-       align-content: stretch;
+        align-content: stretch;
 
 
     }
@@ -192,5 +192,3 @@ footer {
 
 
 }
-
-
