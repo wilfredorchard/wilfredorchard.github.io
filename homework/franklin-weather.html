@@ -1,20 +1,32 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <title>Franklin Weather</title>
-    <link rel="stylesheet" type="text/css" href="franklin.css" />
+    <head>
+        <meta charset="utf-8">
+        <title id="city-name-add"> | Weather Info</title>
+        <meta name="Weather forecast for Franklin, Idaho" content="Interactive and accurate weather landing page for Franklin, Idaho.">
 
-</head>
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-<body>
-
-    <header id="header">
-        <img src="plan-images/logo.jpeg" alt="logo" />
-
-        <span class="name">Weather Site</span>
-    </header>
+        <link rel="stylesheet" href="franklin.css" >
+        <script
+                src="https://code.jquery.com/jquery-3.2.1.min.js"
+                integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+                crossorigin="anonymous"></script>
+    </head>
+    <!-- *********************************************
+* Who Did You Collaborate With On This Assessment?
+* 1.Alex
+* 2.levi
+* 3.Joeseph
+* 4.
+* 5.
+* ******************************************** -->
+    <body>
+        <header id="page-header">
+            <h1 class="site-name">&#9748;<i>Weather Site</i></h1>
+        </header>
     <nav>
         <ul>
             <li><a title="Go to home page" href="../index.html">Home</a> </li>
@@ -25,62 +37,65 @@
         </ul>
     </nav>
     <main>
-        <h1 class="franklin">Franklin, ID</h1>
-        <div id="content">
-        <section class="overview">
-            <h3>Current Temp</h3>
-            <h2>70 F</h2>
-            <p> 90 F / 66 F </p>
-        </section>
-
-        <section class="conditions">
-            <h3>Current Conditions</h3>
-            <ul>
-                <li>
-                    <b>Wind:</b> Southwest @ 1 - 5 MPH
-                </li>
-                <li>
-                    <b>Precip:</b> 0%
-                </li>
-            </ul>
+        <article>
+            <h2 id="city-name"></h2>
+            <div>
+                <section id="cur-conditions">
+                    <h3 class="heading">Current Conditions</h3>
+                    <ul class="info">
+                        <li id="w-info"></li>
+                        <li id="rain-info"></li>
+                    </ul>
+                    <div class="mobile" id="condition">
+                        <p id="icon"></p>
+                        <span id="outlook"></span>
+                    </div>
                 </section>
 
-        <section class="hours">
-            <h3>Hourly Forecast</h3>
-            <ul>
+                <section id="overview">
+                    <h3 class="mobile heading" id="temp"><b>Current Temp</b></h3>
+                    <b id="cur-temp"></b>
+                    <p class="mobile" id="high-low">Today's High and Low</p>
+                    <p id="show-high-low"><span class="screen" id="icon"></span></p>
+                </section>
 
-                <li>12 am: 67 f</li>
-                <li>1 am: 67 f</li>
-                <li>2 am: 69 f</li>
-                <li>3 am: 69 f</li>
-                <li>4 am: 69 f</li>
-                <li>5 am: 70 f</li>
-                <li>6 am: 69 f</li>
-                <li>7 am: 72 f</li>
-                <li>8 am: 74 f</li>
-                <li>9 am: 77 f</li>
-                <li>10 am: 79 f</li>
-                <li>11 am: 81 f</li>
-                <li>12 pm: 84 f</li>
-                <li>1 pm: 86 f</li>
-                <li>2 pm : 88 f</li>
-                <li>3 pm: 90 f</li>
-                <li>4 pm: 90 f</li>
-                <li>5 pm: 85 f</li>
-                <li>6 pm: 83 f</li>
-                <li>7 pm: 79 f</li>
-                <li>8 pm: 74 f</li>
-                <li>9 pm: 70 f</li>
-                <li>10 pm: 68 f</li>
-                <li>11 pm: 66 f</li>
-            </ul>
-        </section>
-        </div>
+                <section class="mobile" id="hourly">
+                    <h3 class="heading"><b>Hourly Forecast</b></h3>
+                    <ul id="times">
+                        <li>12am   67F</li>
+                        <li>1am   67F</li>
+                        <li>2am   69F</li>
+                        <li>3am   69F</li>
+                        <li>4am   69F</li>
+                        <li>5am   70F</li>
+                        <li>6am   69F</li>
+                        <li>7am   72F</li>
+                        <li>8am   74F</li>
+                        <li>9am   77F</li>
+                        <li>10am   79F</li>
+                        <li>11am   81F</li>
+                        <li>12pm   84F</li>
+                        <li>1pm   86F</li>
+                        <li>2pm   88F</li>
+                        <li>3pm   90F</li>
+                        <li>4pm   90F</li>
+                        <li>5pm   85F</li>
+                        <li>6pm   83F</li>
+                        <li>7pm   79F</li>
+                        <li>8pm   74F</li>
+                        <li>9pm   70F</li>
+                        <li>10pm   68F</li>
+                        <li>11pm   66F</li>
+                    </ul>
+                </section>
+            </div>
+        </article>
     </main>
     <footer>
         &copy; 2017, William Orchard
     </footer>
 
 </body>
+    <script src="current-weather.js"></script>
 
 </html>

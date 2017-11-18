@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Sansita');
 
+* {box-sizing: border-box; /* changes width property
+    to total width instead of content width */}
 
-*:before,
-*:after {
-    box-sizing: border-box;
-}
+*:before, *:after{box-sizing: border-box;}
 
 article,
 aside,
@@ -14,183 +13,180 @@ nav,
 section,
 main,
 figcaption,
-figure {
-    display: block;
+figure {display: block; /* just in case we have
+    any older browsers that don't recognize
+    the HTML5 semantic elements */}
 
-}
+header h1 {margin: .1em;}
 
-#header {
-    display: flex;
-    align-items: center;
-    background-color: #0E89D5;
-}
-
-
-#logo {
-    font-size:4em;
-    margin:0;
-}
-.name {
-    font-size: 2em;
-    font-weight: 600;
-    font-family: Sansita, "gadget", generic-family;
-    font-style: italic;
-}
-
-nav {
-    position:fixed;
-    bottom:0;
-    left: 0;
-    right: 0;
-    background-color: #0E89D5;
-    line-height: 3px;
-    padding: 4px;
-}
-
-
-
-nav ul {
-    display: flex;
-    list-style: none;
-    flex-flow: row;
-    align-items: center;
-    padding-left: 0;
-    /*  margin: 10px*/
-}
-
-nav ul li {
-    padding-right: 1em;
-    font-size: 4vw;
-}
-
-Body {
+body {margin: 0; /* remove any margin from body */
+    padding: 0; /* ditto for padding */
     font-family: 'Helvetica', sans-serif;
-    margin: 0;
-    /* remove any margin from body */
-    padding: 0;
-    /* ditto for padding */
-    font-size: 20px;
-}
+    font-size: 20px;}
 
-main {
-    display: flex;
+main {display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    background-color: #FFF;
     background-image: url("plan-images/sunny-winter.jpg");
     background-size: cover;
-    background-color: #FFF
-}
+    text-align: center;}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: Sansita, 'Geneva', generic-family;
-    color: #0e89d5;
-}
+h1,h2,h3,h4,h5,h6 {color: black;
+    font-family: 'Sansita', "second choice", sans-serif;}
 
-.overview {
-    padding: 1em;
-    border: 1px black solid;
-    border-radius: 5px;
-    margin-bottom: 2em;
-    background-color: rgba(200, 200, 200, .6);
-
-
-}
-
-.overview h2{
-    color: black;
-    font-size: 40px;
-    text-align: center;
-}
-.overview h3{
-    color: black;
-}
-
-.overview p:before {
-    content: " \2600";
-}
-
-.conditions {
-    background-image: url("/weather_data/images/plan-images/raindrops.jpg");
-    background-color: rgba(200, 200, 200, .6);
-    margin: 2em auto;
-    border: 1px solid;
-    border-radius: 5px;
-
-}
-
-.conditions ul {
+nav ul {display: flex;
     list-style: none;
-}
+    line-height: 1em;
+    justify-content: space-between;
+    font-size: .85em;
+    padding-left: 2em;
+    padding-right: 2em;}
 
-.conditions h3 {
-    text-align: center;
-    color: black;
-}
-.hours h3{
-    text-align: center;
-    color: black;
+nav {position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #0e89d5;
+    padding: .4em;}
 
-}
-.hours{
-    display: none;
-    background-image: url("/weather_data/images/plan-images/raindrops.jpg");
-    background-color: rgba(200, 200, 200, .6);
-    margin: 2em auto;
+/* nav interaction */
+nav a:link {text-decoration: none;
+    color: #FFF;}
+
+nav a:visited {color: #D8F;}
+
+nav a:hover,nav a:focus {color: #6c4ddb;}
+
+#page-header{display: flex;
+    align-items: center;
+    background-color: #0e89d5;}
+
+.site-name {font-size: 1.5em;
+    font-weight: 600;
+    vertical-align: center;
+    padding-left: .3em;
+    color: #FFF;}
+
+/* If using an image for logo #head-logo {height: 20px;} */
+
+/* logo using HTML entity */
+#logo {font-size: 3em;
+    margin: 0;
+    padding-left: .15em;}
+
+#city-name {order: 0;
+    font-size: 2em;
+    margin-top: 0;}
+
+article {display:flex;
+    flex-direction: column;
+    margin-top: 1em;
+    margin-bottom: 1em;}
+
+article h1 {padding-left: 5%;}
+
+footer {margin-bottom: 2em;
+    background-color: #0e89d5;
+    padding: .4em;
+    font-size: .85em;}
+
+ul {list-style-type: none;
+    padding: 0;}
+
+#cur-conditions {background-color: rgba(200,200,200,.6);
+    margin: .2em auto;
     border: 1px solid;
-    border-radius: 5px;
+    border-radius: 10px;
+    order: 2;
+    padding: 1em;}
 
+/* change heading color for better clarity */
+.heading {color: #0e89d5;
+    margin-top: 0;
+    justify-content: center;}
 
-}
-.hours ul{
-    list-style-type: none;
-}
-footer {
-    text-align: center;
-    line-height: 70px;
-    margin-bottom: 3em;
-    background-color: #0E89D5;
+/* correct alignment and spacing */
+.info {justify-content: center;
+    text-align: left;
+    margin-bottom: 0;}
 
-}
+#overview {background-color: rgba(200,200,200,.6);
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 10px;
+    order: 1;
+    padding: 1em;
+    padding-bottom: 0;}
 
-@media screen and (min-width: 830px) {
-    nav{
-        position:static;
+/* make curent temperature large */
+#cur-temp {font-size: 2em;}
 
-    }
-    .hours{
+#high-low {margin-bottom: .4em;}
+
+/* only for mobile */
+.mobile {display: none;}
+
+/* display for desktop */
+@media screen and (min-width: 414px) {
+    /* larger site name */
+    .site-name {font-size: 3em;
+        font-weight: 600;}
+
+    /* nav bar at top */
+    .nav {display: flex;}
+
+    /* align city-name to left */
+    article {width: 100%;
         display: flex;
-        margin: 1em;
-        padding: 2em;
-    }
-    .conditions{
-        order: -1;
-        margin:1em;
-        padding: 2em;
+        flex-flow: column;
+        align-items: flex-start;}
+    #city-name {margin-left: 3%;}
 
+    /* background img raindrop */
+    main {background-image: url("plan-images/sunny-winter.jpg");}
 
-    }
-   #content{
-       display: flex;
-        text-align: center;
-        justify-content:space-around;
-        align-items:center;
-       align-content: stretch;
+    /* display section as row AND display hourly */
+    div {width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;}
+    #cur-conditions {width: 30%;
+        display: flex;
+        flex-flow: column;
+        order: 0;}
+    #condition {display: flex;
+        align-items: center;}
+    #sun {font-size: 3em;}
+    #overview {width: 24%;
+        display: flex;
+        flex-flow: column;
+        order: 1;
+        justify-content: center;
+        margin: .2em auto;
+        padding-top: 0;}
+    #temp {display: flex;}
+    #high-low {display: flex;
+        justify-content: center;}
+    .screen {display: none;}
+    #hourly {width: 30%;
+        display: flex;
+        flex-flow: column;
+        order: 2;
+        background-color: rgba(200,200,200,.6);
+        margin: .2em auto;
+        border: 1px solid;
+        border-radius: 10px;
+        order: 2;
+        padding: 1em;}
+    #hourly ul {width: 95%;}
 
+    /* reorganize nav bar */
+    nav {position: initial;}
 
-    }
-    .overview{
-        padding: 2em;
-    }
-    .franklin{
-        align-self: flex-start;
-    }
-
-
+    /* organize hourly times */
+    #times {overflow:auto;
+        height: 130px;}
 }
-
-
