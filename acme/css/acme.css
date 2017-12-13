@@ -36,6 +36,7 @@ h6 {
     flex-direction: column;
     padding-bottom: 5%;
     background-color: #ffffff;
+
     margin: 8px;
 
 }
@@ -122,21 +123,10 @@ a:active {
     padding:5px;
 }
 
-#pic {
-    max-width: 100%;
+.genius{
+    width: 100%;
 }
 
-#rocket-item {
-    list-style: none;
-    text-align: left;
-    position: absolute;
-    top: 1em;
-    right: 1em;
-    color: red;
-    margin: .2em auto;
-    order: 2;
-    padding: 1em;
-}
 
 .description-item {
     width: 100%;
@@ -145,17 +135,52 @@ a:active {
 
     order: 2;
 }
+.rockettext{
+    width: 50%;
+    list-style: none;
+    text-align: center;
+    font-size: 80%;
+    position: absolute;
+    left: 52%;
+    bottom: 10em;
+    padding: 0;
+    margin: 0;
 
-#recipe-content {
+}
+.reviews{
+    color: #ffffff;
+    background-color: #990033;
+    margin: 0 !important;
+    text-align: left !important;
+    position: relative;
+    top: 1em;
+    font-size: 80%;
+}
+#recipies > ul{
+    list-style: none;
+    font-size: 80%;
+    position: relative;
+    right: 1em;
     display: flex;
-    flex-flow: column nowrap;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
 
 }
 
 #recipe-images {
 
 }
+#displayPrice {
+    list-style: none;
+    color: #de2226;
+    text-align: center;
+    position: relative;
+    right: 10%;
+    top: 1em;
+    font-size: 150%;
 
+};
 
 #product-review {
     ;
@@ -246,6 +271,7 @@ position for product
         padding-bottom: 2%;
     }
 
+
     /* nav bar at top */
     #page-nav {
         position: inherit;
@@ -335,7 +361,7 @@ position for product
         text-align: center;
     }
 
-    #rocket-item {
+    .rocket-text {
         list-style: none;
         text-align: left;
         position: absolute;
