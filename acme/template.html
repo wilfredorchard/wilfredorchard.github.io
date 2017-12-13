@@ -6,33 +6,48 @@
         <title>ACME</title>
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="css/template.css" media="screen">
+        <link rel="stylesheet" href="css/acme.css" media="screen">
     </head>
 
     <body>
-        <div id="wrapper">
+
+        <div id="content-wrapper">
+
             <header id="page-header">
-                <!--        This content describes the web site, it's at the top-->
-                <img src="images/site/logo.png" alt="ACME logo - Buy here, eat roadrunner">
+
+                <img src="images/site/logo.png" alt="Acme logo" title=" logo for acme site">
+
             </header>
+
             <nav id="page-nav">
-                <!--        The navagation links-->
-                <ul id="nav-items">
+                <ul class="flexlist">
+                    <li><a href="." title="Acme">Home</a></li>
+                    <li><a id="anvils"  title="Acme's product">Anvil</a> </li>
+                    <li><a id="explosive" title="Acme's product">Explosives</a></li>
+                    <li><a id="decoys"  title="Acme's product">Decoys</a></li>
+                    <li><a id="traps" title="Acme's product">Traps</a></li>
                 </ul>
-                <noscript>JavaScript must be enabled for this site to function</noscript>
             </nav>
-            <main>
-                <!--        This is for the main content of the page-->
-                <h1>Home Page</h1>
+
+            <main id="content-page-main">
+
+
+                <div id="content-title">
+                    <h1>Content Title Here</h1>
+
+                </div>
+
             </main>
-            <footer>
-                <!--        Bottom of the page, legal stuff-->
+
+            <footer id="page-footer">
+                <hr>
                 <small>&copy; 2017 ACME Inc., All Rights Reserved</small><br>
                 <small>All images used are believed to be in "Fair Use". Please notify the author if any are not and they will be removed.</small>
+
+                <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>        <script src="js/acme-script.js"></script>
             </footer>
+
         </div>
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-        <script src="js/acme-script.js"></script>
     </body>
 
 </html>
