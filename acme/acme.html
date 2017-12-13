@@ -19,10 +19,17 @@
             <nav id="page-nav">
                 <!--        The navagation links-->
                 <ul id="nav-items">
+                    <li><a href="/acme/index.html" title="Go to home page">Home</a></li>
+                    <li><a id="anvils" href="images/products/anvil.png" title="Acme's product"></a></li>
+                    <li><a id="explosive" href="images/products/tnt.png" title="Acme's product"></a></li>
+                    <li><a id="decoys" href="images/products/roadrunner.jpg" title="Acme's product"></a></li>
+                    <li><a id="traps" href="images/products/trap.jpg" title="Acme's product"></a></li>
                 </ul>
                 <noscript>JavaScript must be enabled for this site to function</noscript>
             </nav>
             <main>
+
+
                 <div id="homecontent">
                     <!--        This is for the main content of the page-->
                     <h1>Welcome to ACME!</h1>
@@ -45,6 +52,7 @@
                             <li>"Talk about fast delivery." (5/5)</li>
                             <li>"I didn't even have to pull the meat apart." (4.5/5)</li>
                             <li>"I'm on my thirtieth one. I love these things!" (5/5)</li>
+
                         </ul>
                     </div>
                     <div id="recipies">
@@ -58,20 +66,24 @@
                     </div>
                 </div>
 
-                <div id="product">
-                    <div id="showcase">
-                        <!--            <div id="details">
-<ul id="deets">
+                <section id="product">
 
-<li class="description"></li>
-<li class="manufacturer"></li>
-<li class="reviewscore"></li>
-<li class="price"></li>
+                    <h1 id="displayName"></h1>
+                    <div id="product-wrapper">
 
+                        <p id="displayImage"> </p>
 
-</ul> -->
+                        <ul id="description-position">
+
+                            <li id="displayDescription"></li>
+                            <li id="displayManufacturer"></li>
+                            <li id="displayReviews"></li>
+                            <li id="displayPrice"></li>
+
+                        </ul>
                     </div>
-                </div>
+                </section>
+
             </main>
             <footer>
                 <!--        Bottom of the page, legal stuff-->
@@ -80,7 +92,7 @@
             </footer>
         </div>
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-        <script src="js/script.js"></script>
+        <script src="js/acme-script.js"></script>
     </body>
 
 </html>

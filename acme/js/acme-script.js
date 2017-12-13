@@ -1,61 +1,99 @@
-$(function() {
-    $("#nav-items").append('<li id="home"><a href="link" title="Go to home page.">Home</a></li>');
+    $(function () {
+        console.log("it works!");
+        document.getElementById("product").style.display = "none";
+
+        document.getElementById("homecontent").style.display = "block";
 
 
-    $.getJSON('js/acme.json',function(result) {
-        $.each(result.navigation, function(i, nav){
-            console.log(result);
-            var name = result.navigation[i].name;
-            console.log(name);
 
-            $("#nav-items").append('<li id="' + name.toLowerCase() + '"><a href="link" title="Go to ' + name + '.">' + name + '</a></li>');
+    $.ajax({
+        url :"js/acme.json",
+        dataType : "json",
+        success : function(data) {
+            console.log(data);
+            var i_one = data.items.item_one;
+            var i_two = data.items.item_two;
+            var i_three = data.items.item_three;
+            var i_four = data.items.item_four;
 
-        })
-        $('#home').on("click", function( event ){
-            event.preventDefault();
-            $(document).attr("title", "ACME Home Page");
-            $('#homecontent').show();
-            $('#product').css('visibility','hidden');
-        })
-        $('#page-nav').on("click", ":not(:first-child) a", function( event ){
-            event.preventDefault();
-            var itemname = this.text;
-            $("#homecontent").hide();
-            $("#product").css('visibility', 'visible');
-            var decider;
-            if (itemname == result.navigation[0].name){
-                decider = 0;
+            console.log("items" + i_one );
+            console.log("items" + i_two);
+            console.log("items" + i_three );
+            console.log("items" + i_four );
+
+
+
+                $("#anvils").text(i_one);
+                $("#explosive").text(i_two);
+                $("#decoys").text(i_three);
+                $("#traps").text(i_four);
+
+
+
+        }
+    });
+
+
+        // Insert links in the nav
+        function getData(itemName) {
+            // Get the data from the local from acme folder
+            if(itemName==="Home"){
+                document.getElementById("product").style.display = "none";
+
+                document.getElementById("homecontent").style.display = "block";
+
+                $("title").html(itemName + ' | ACME');
+
             }
-            if (itemname == result.navigation[1].name){
-                decider = 1;
-            }
-            if (itemname == result.navigation[2].name){
-                decider = 2;
-            }
-            if (itemname == result.navigation[3].name){
-                decider = 3;
-            }
-            var tion = result.navigation[decider].description;
-            $('#deets').remove();
-            $('#details').remove();
-            $('#showcase > h1').remove();
-            var wholename = result.navigation[decider].name;
-            $(document).attr("title", wholename + " | ACME");
-            $('#showcase').append('<h1>' + wholename + '</h1>');
-            $('#showcase').append('<div id="details">');
-            var imgpath = result.navigation[decider].path;
-            $('#details').append('<img src="' + imgpath + '" alt="' + itemname + '">');
-            $('#details').append('<ul id="deets">');
-            $('#deets').append('<li class="description"><strong>Description:</strong><br> ' + tion + '</li>');
-            var man = result.navigation[decider].manufacturer;
-            $('#deets').append('<li class="manufacturer"><strong>Manufacturer:</strong><br> ' + man + '</li>');
-            var score = result.navigation[decider].reviews;
-            $('#deets').append('<li class="reviewscore"><strong>Reviews:</strong><br> ' + score + '/5 Stars</li>');
-            var price = result.navigation[decider].price;
-            $('#deets').append('<li class="price"><strong>Price:</strong> $' + price + '</li>');
-            $('#deets').append('</ul>');
-            $('#deets').append('</div');
-            console.log("Success");
-        })
+            else{
 
-    })
+                document.getElementById("homecontent").style.display = "none";
+
+                document.getElementById("product").style.display = "block";
+
+
+                $.ajax({
+                    url :"js/acme.json",
+                    dataType : "json",
+                    success : function(data) {
+                        console.log(data);
+                        var name = data[itemName].name;
+                        var description = data[itemName].description;
+                        var manufacturer = data[itemName].manufacturer;
+                        var price = data[itemName].price;
+                        var reviews = data[itemName].reviews;
+                        var path =data[itemName].path;
+                        console.log(" data" + itemName);
+                        console.log("name is " + name);
+                        console.log("descriptiop is " + description);
+                        console.log('manufacturer is: ' + manufacturer);
+                        console.log('price is: ' + price);
+                        console.log(' reviews is: ' + reviews);
+                        console.log("image is" + path);
+                        $("title").html(itemName + ' | ACME');
+                        $("#displayName").text(name);
+                        $("#displayImage").html("<img src=' " + path +" 'alt='anvil'>");
+                        $("#displayDescription").text(description);
+                        $("#displayManufacturer").text("Made by:" + manufacturer);
+                        $("#displayReviews").text("Reviews: " + reviews + " /5 starts");
+                        $("#displayPrice").text("Price: $ " + price);
+
+                    }
+
+
+                });
+            }
+        }
+
+        // Intercept the menu link clicks
+        $("#page-nav").on("click", "a", function (evt) {
+            evt.preventDefault();
+            console.log('click occured');
+            //get the value
+            var itemName = $(this).text();
+            console.log(itemName);
+            getData(itemName);
+
+
+        });
+    });
