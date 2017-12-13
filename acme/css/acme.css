@@ -180,7 +180,7 @@ a:active {
     top: 1em;
     font-size: 150%;
 
-};
+}
 
 #product-review {
     ;
@@ -208,7 +208,7 @@ figure{
 /*The page footer*/
 
 #page-footer {
-    font-size: .7re m;
+    font-size: .7em;
     margin: 0;
 }
 
