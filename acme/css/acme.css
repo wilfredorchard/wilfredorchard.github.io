@@ -8,6 +8,7 @@ body {
     background-repeat: no-repeat;
 }
 
+
 body,
 caption,
 th,
@@ -361,10 +362,4 @@ position for product
         text-align: center;
     }
 
-    .rocket-text {
-        list-style: none;
-        text-align: left;
-        position: absolute;
-        top: 15%;
-        right: 10%;
-    }
+
